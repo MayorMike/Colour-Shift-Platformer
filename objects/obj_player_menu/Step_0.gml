@@ -1,12 +1,10 @@
 //Player Gravity
-ysp += 0.1;
+
 //Player speed
 xsp = 0;
 
-
-//Move Left
 if (keyboard_check(vk_left) or keyboard_check(ord("A"))) and !isDead{
-    xsp = -1;
+    xsp = 0;
     //Check Player Colour
     if playercolour == 1 {
         sprite_index = spr_player_left_blue;
@@ -20,9 +18,8 @@ if (keyboard_check(vk_left) or keyboard_check(ord("A"))) and !isDead{
     
 }
 
-//Move Right
 if (keyboard_check(vk_right) or keyboard_check(ord("D"))) and !isDead{
-    xsp = +1;
+    xsp = 0;
     //Check Player Colour
     if playercolour == 1 {
         sprite_index = spr_player_right_blue;
@@ -36,7 +33,6 @@ if (keyboard_check(vk_right) or keyboard_check(ord("D"))) and !isDead{
     
 }
 
-//Player Idle Animation
 if xsp == 0 {
     //Check Player Colour and set proper sprite
     if playercolour == 1 {
@@ -53,9 +49,9 @@ if xsp == 0 {
 //Check if player is on ground
 //Blue
 if playercolour == 1 {
-    if place_meeting(x, y+1, [obj_solid_blue, obj_solid_purple]){
+    if place_meeting(x, y+1, obj_solid_blue){
         ysp = 0;
-        if (keyboard_check(vk_space)) and !isDead{
+        if (keyboard_check_pressed(vk_space)) and !isDead{
             ysp = -2;
         }
     }
@@ -63,9 +59,9 @@ if playercolour == 1 {
 
 //Green
 else if playercolour == 2{
-    if place_meeting(x, y+1, [obj_solid_green, obj_solid_purple]){
+    if place_meeting(x, y+1, obj_solid_green){
         ysp = 0;
-        if (keyboard_check(vk_space)) and !isDead{
+        if (keyboard_check_pressed(vk_space)) and !isDead{
             ysp = -2;
         }
     }
@@ -73,26 +69,20 @@ else if playercolour == 2{
 
 //Red
 else if playercolour == 3{
-    if place_meeting(x, y+1, [obj_solid_red, obj_solid_purple]){
+    if place_meeting(x, y+1, obj_solid_red){
         ysp = 0;
-        if (keyboard_check(vk_space)) and !isDead{
+        if (keyboard_check_pressed(vk_space)) and !isDead{
             ysp = -2;
         }
     }
 }
-
-//Check floor/wall collision
-//Blue
-if playercolour == 1 {
-    move_and_collide(xsp, ysp, [obj_solid_blue, obj_solid_purple]);
-}
-//Green
-else if playercolour == 2 {
-    move_and_collide(xsp, ysp, [obj_solid_green, obj_solid_purple]);
-}
-//Red
-else if playercolour == 3 {
-    move_and_collide(xsp, ysp, [obj_solid_red, obj_solid_purple]);
+else {
+	if place_meeting(x, y+1, obj_solid_purple){
+        ysp = 0;
+        if (keyboard_check_pressed(vk_space)) and !isDead{
+            ysp = -2;
+        }
+    }
 }
 
 if (keyboard_check_pressed(vk_lshift)){
@@ -102,15 +92,4 @@ if (keyboard_check_pressed(vk_lshift)){
     if playercolour > 3 {
         playercolour = 1;
     }
-}
-
-
-//Collect flag - go to next level
-if (place_meeting(x, y, obj_flag)){
-    room_goto_next();
-}
-
-//Touch spikes - die (or restart room for now)
-if (place_meeting(x, y, obj_spikes)){
-room_restart();
 }
