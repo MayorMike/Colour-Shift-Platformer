@@ -16,7 +16,7 @@ function keybindings() {
     global.moveLeft = inputCheckHeld("Move Left");
     global.moveRight = inputCheckHeld("Move Right");
     global.moveUp = inputCheckHeld("Move Up");
-    global.moveDown = inputCheckHeld("Move Down")
+    global.moveDown = inputCheckHeld("Move Down");
     global.moveJump = inputCheckPressed("Move Jump");
     global.shiftColour = inputCheckPressed("Shift Colour");
 }

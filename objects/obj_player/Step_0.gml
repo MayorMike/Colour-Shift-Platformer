@@ -55,7 +55,7 @@ if xsp == 0 {
 if playercolour == 1 {
     if place_meeting(x, y+1, [obj_solid_blue, obj_solid_purple]){
         ysp = 0;
-        if (inputCheckPressed(global.moveJump)) and !isDead{
+        if (global.moveJump) and !isDead{
             ysp = -2;
         }
     }
@@ -65,7 +65,7 @@ if playercolour == 1 {
 else if playercolour == 2{
     if place_meeting(x, y+1, [obj_solid_green, obj_solid_purple]){
         ysp = 0;
-        if (keyboard_check(global.moveJump)) and !isDead{
+        if (global.moveJump) and !isDead{
             ysp = -2;
         }
     }
@@ -75,7 +75,7 @@ else if playercolour == 2{
 else if playercolour == 3{
     if place_meeting(x, y+1, [obj_solid_red, obj_solid_purple]){
         ysp = 0;
-        if (keyboard_check(global.moveJump)) and !isDead{
+        if (global.moveJump) and !isDead{
             ysp = -2;
         }
     }
@@ -95,13 +95,13 @@ else if playercolour == 3 {
     move_and_collide(xsp, ysp, [obj_solid_red, obj_solid_purple]);
 }
 
-if (keyboard_check_pressed(global.shiftColour)){
+if (global.shiftColour){
     playercolour = playercolour + 1; 
     show_debug_message("Colour Changed!");
-    show_debug_message(playercolour);
     if playercolour > 3 {
         playercolour = 1;
     }
+    show_debug_message(playercolour);
 }
 
 
