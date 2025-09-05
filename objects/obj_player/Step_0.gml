@@ -5,7 +5,7 @@ xsp = 0;
 
 
 //Move Left
-if (keyboard_check(vk_left) or keyboard_check(ord("A"))) and !isDead{
+if (global.moveLeft) and !isDead{
     xsp = -1;
     //Check Player Colour
     if playercolour == 1 {
@@ -21,7 +21,7 @@ if (keyboard_check(vk_left) or keyboard_check(ord("A"))) and !isDead{
 }
 
 //Move Right
-if (keyboard_check(vk_right) or keyboard_check(ord("D"))) and !isDead{
+if (global.moveRight) and !isDead{
     xsp = +1;
     //Check Player Colour
     if playercolour == 1 {
@@ -55,7 +55,7 @@ if xsp == 0 {
 if playercolour == 1 {
     if place_meeting(x, y+1, [obj_solid_blue, obj_solid_purple]){
         ysp = 0;
-        if (keyboard_check(vk_space)) and !isDead{
+        if (inputCheckPressed(global.moveJump)) and !isDead{
             ysp = -2;
         }
     }
@@ -65,7 +65,7 @@ if playercolour == 1 {
 else if playercolour == 2{
     if place_meeting(x, y+1, [obj_solid_green, obj_solid_purple]){
         ysp = 0;
-        if (keyboard_check(vk_space)) and !isDead{
+        if (keyboard_check(global.moveJump)) and !isDead{
             ysp = -2;
         }
     }
@@ -75,7 +75,7 @@ else if playercolour == 2{
 else if playercolour == 3{
     if place_meeting(x, y+1, [obj_solid_red, obj_solid_purple]){
         ysp = 0;
-        if (keyboard_check(vk_space)) and !isDead{
+        if (keyboard_check(global.moveJump)) and !isDead{
             ysp = -2;
         }
     }
@@ -95,7 +95,7 @@ else if playercolour == 3 {
     move_and_collide(xsp, ysp, [obj_solid_red, obj_solid_purple]);
 }
 
-if (keyboard_check_pressed(vk_lshift)){
+if (keyboard_check_pressed(global.shiftColour)){
     playercolour = playercolour + 1; 
     show_debug_message("Colour Changed!");
     show_debug_message(playercolour);
