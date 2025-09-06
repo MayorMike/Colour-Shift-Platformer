@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Keybinds System",
-    "path":"folders/Keybinds System.yy",
+    "path":"folders/Objects/Keybinds System.yy",
   },
   "parentObjectId":null,
   "persistent":true,

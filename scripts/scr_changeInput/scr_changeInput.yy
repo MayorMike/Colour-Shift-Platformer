@@ -6,7 +6,7 @@
   "name":"scr_changeInput",
   "parent":{
     "name":"Keybinds System",
-    "path":"folders/Keybinds System.yy",
+    "path":"folders/Objects/Keybinds System.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
