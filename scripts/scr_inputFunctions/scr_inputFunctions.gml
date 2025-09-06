@@ -92,12 +92,12 @@ function BindGPA(_name, _axis, _value) constructor {
     lastHeld = false;
     released = false;
     
-    pressedFN = function (){
-if (lastHeld == false and held == true){
+    pressedFn = function (){
+    if (lastHeld == false and held == true){
     pressed = true;
-}
-        else{
-            pressed = false;
+    }
+    else{
+        pressed = false;
         }
     }
     heldFn = function (){

@@ -55,15 +55,15 @@ function inputChangeGamepad(_name){
     if (gamepad_button_check_pressed(0, gp_stickr)) {return (new BindGPB(_name, gp_stickr))};
         
     //Left Gamepad Axis
-    if (gamepad_axis_value(0, gp_axislh) > 0.8) {return (new BindGPA(_name, gp_axislh, 0.5))}
-    if (gamepad_axis_value(0, gp_axislh) > -0.8) {return (new BindGPA(_name, gp_axislh, -0.5))}
-    if (gamepad_axis_value(0, gp_axislv) > 0.8) {return (new BindGPA(_name, gp_axislv, 0.5))}
-    if (gamepad_axis_value(0, gp_axislv) > -0.8) {return (new BindGPA(_name, gp_axislv, -0.5))}
-    //Right Gamepad Axis
-    if (gamepad_axis_value(0, gp_axisrh) > 0.8) {return (new BindGPA(_name, gp_axisrh, 0.5))}
-    if (gamepad_axis_value(0, gp_axisrh) > -0.8) {return (new BindGPA(_name, gp_axisrh, -0.5))}
-    if (gamepad_axis_value(0, gp_axisrv) > 0.8) {return (new BindGPA(_name, gp_axisrv, 0.5))}
-    if (gamepad_axis_value(0, gp_axisrv) > -0.8) {return (new BindGPA(_name, gp_axisrv, -0.5))}
+    if (gamepad_axis_value(0, gp_axislh) > 0.8) {return (new BindGPA(_name, gp_axislh, 0.5))};
+    if (gamepad_axis_value(0, gp_axislh) < -0.8) {return (new BindGPA(_name, gp_axislh, -0.5))};
+    if (gamepad_axis_value(0, gp_axislv) > 0.8) {return (new BindGPA(_name, gp_axislv, 0.5))};
+    if (gamepad_axis_value(0, gp_axislv) < -0.8) {return (new BindGPA(_name, gp_axislv, -0.5))};
+    //Right Gamepad Axis 
+    if (gamepad_axis_value(0, gp_axisrh) > 0.8) {return (new BindGPA(_name, gp_axisrh, 0.5))};
+    if (gamepad_axis_value(0, gp_axisrh) < -0.8) {return (new BindGPA(_name, gp_axisrh, -0.5))};
+    if (gamepad_axis_value(0, gp_axisrv) > 0.8) {return (new BindGPA(_name, gp_axisrv, 0.5))};
+    if (gamepad_axis_value(0, gp_axisrv) < -0.8) {return (new BindGPA(_name, gp_axisrv, -0.5))};
         
     return (-1);
 }
