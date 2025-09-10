@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"obj_solid_red",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_solid_red",
   "overriddenProperties":[],
@@ -28,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_solid_red",
-    "path":"sprites/spr_solid_red/spr_solid_red.yy",
+    "name":"spr_solid",
+    "path":"sprites/spr_solid/spr_solid.yy",
   },
   "spriteMaskId":null,
   "visible":true,

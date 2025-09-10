@@ -104,7 +104,6 @@ if (global.shiftColour){
     if playercolour > 3 {
         playercolour = 1;
     }
-    show_debug_message(playercolour);
 }
 
 
