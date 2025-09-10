@@ -65,7 +65,7 @@ if playercolour == 1 {
 }
 
 //Green
-else if playercolour == 2{
+else if playercolour == 2 {
     if place_meeting(x, y+1, [obj_solid_green, obj_solid_purple]){
         ysp = 0;
         if (global.moveJump) and !isDead{
@@ -75,7 +75,7 @@ else if playercolour == 2{
 }
 
 //Red
-else if playercolour == 3{
+else if playercolour == 3 {
     if place_meeting(x, y+1, [obj_solid_red, obj_solid_purple]){
         ysp = 0;
         if (global.moveJump) and !isDead{
