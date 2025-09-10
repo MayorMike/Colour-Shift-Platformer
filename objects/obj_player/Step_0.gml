@@ -121,10 +121,13 @@ room_restart();
 //Temporary Change Colour Test
 if keyboard_check_pressed(ord("I")){
     obj_settings.playerColour = 1;
+    show_debug_message("Using PC Colours!");
 }
 if keyboard_check_pressed(ord("O")){
     obj_settings.playerColour = 2;
+    show_debug_message("Using Xbox Colours!");
 }
 if keyboard_check_pressed(ord("P")){
     obj_settings.playerColour = 3;
+    show_debug_message("Using PlayStation Colours!");
 }
