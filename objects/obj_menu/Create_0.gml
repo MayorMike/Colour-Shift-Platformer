@@ -12,7 +12,7 @@ option[0, 2] = "Exit Game";
 
 option [1, 0] = "Fullscreen";
 option [1, 1] = "Controls";
-option [1, 2] = "TEST"
+option [1, 2] = "Colours"
 option [1, 3] = "Back";
 
 op_length = 0;

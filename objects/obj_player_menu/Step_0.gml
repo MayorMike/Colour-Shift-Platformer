@@ -3,46 +3,19 @@
 //Player speed
 xsp = 0;
 
-if (keyboard_check(vk_left) or keyboard_check(ord("A"))) and !isDead{
-    xsp = 0;
-    //Check Player Colour
-    if playercolour == 1 {
-        sprite_index = spr_player_left_blue;
-    }
-    else if playercolour == 2 {
-        sprite_index = spr_player_left_green;
-    }
-    else if playercolour == 3 {
-        sprite_index = spr_player_left_red;
-    }
-    
-}
 
-if (keyboard_check(vk_right) or keyboard_check(ord("D"))) and !isDead{
-    xsp = 0;
-    //Check Player Colour
-    if playercolour == 1 {
-        sprite_index = spr_player_right_blue;
-    }
-    else if playercolour == 2 {
-        sprite_index = spr_player_right_green;
-    }
-    else if playercolour == 3 {
-        sprite_index = spr_player_right_red;
-    }
-    
-}
-
+//Player Idle Animation
 if xsp == 0 {
     //Check Player Colour and set proper sprite
+    sprite_index = spr_player_idle;
     if playercolour == 1 {
-        sprite_index = spr_player_idle_blue;
+        image_blend = make_color_rgb(48, 0, 252);
     }
     else if playercolour == 2 {
-        sprite_index = spr_player_idle_green;
+        image_blend = make_color_rgb(71, 253, 33);
     }
     else if playercolour == 3 {
-        sprite_index = spr_player_idle_red;
+        image_blend = make_color_rgb(228, 47, 46);
     } 
 }
 

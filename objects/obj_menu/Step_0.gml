@@ -39,7 +39,7 @@ if accept_key {
             //Controls
             case 1:  
                 break;
-            //TEST
+            //Colours
             case 2:
                 break;
             //Back

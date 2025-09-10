@@ -8,15 +8,16 @@ xsp = 0;
 if (global.moveLeft) and !isDead{
     xsp = -1;
     //Check Player Colour
-    if playercolour == 1 {
-        sprite_index = spr_player_left_blue;
+    sprite_index = spr_player_left
+if playercolour == 1 {
+        image_blend = obj_controller.player_colour_1;
     }
     else if playercolour == 2 {
-        sprite_index = spr_player_left_green;
+        image_blend = obj_controller.player_colour_2;
     }
     else if playercolour == 3 {
-        sprite_index = spr_player_left_red;
-    }
+        image_blend = obj_controller.player_colour_3;
+    } 
     
 }
 
@@ -24,29 +25,31 @@ if (global.moveLeft) and !isDead{
 if (global.moveRight) and !isDead{
     xsp = +1;
     //Check Player Colour
-    if playercolour == 1 {
-        sprite_index = spr_player_right_blue;
+    sprite_index = spr_player_right
+if playercolour == 1 {
+        image_blend = obj_controller.player_colour_1;
     }
     else if playercolour == 2 {
-        sprite_index = spr_player_right_green;
+        image_blend = obj_controller.player_colour_2;
     }
     else if playercolour == 3 {
-        sprite_index = spr_player_right_red;
-    }
+        image_blend = obj_controller.player_colour_3;
+    }  
     
 }
 
 //Player Idle Animation
 if xsp == 0 {
     //Check Player Colour and set proper sprite
+    sprite_index = spr_player_idle;
     if playercolour == 1 {
-        sprite_index = spr_player_idle_blue;
+        image_blend = obj_controller.player_colour_1;
     }
     else if playercolour == 2 {
-        sprite_index = spr_player_idle_green;
+        image_blend = obj_controller.player_colour_2;
     }
     else if playercolour == 3 {
-        sprite_index = spr_player_idle_red;
+        image_blend = obj_controller.player_colour_3;
     } 
 }
 
@@ -113,4 +116,15 @@ if (place_meeting(x, y, obj_flag)){
 //Touch spikes - die (or restart room for now)
 if (place_meeting(x, y, obj_spikes)){
 room_restart();
+}
+
+//Temporary Change Colour Test
+if keyboard_check_pressed(ord("I")){
+    obj_settings.playerColour = 1;
+}
+if keyboard_check_pressed(ord("O")){
+    obj_settings.playerColour = 2;
+}
+if keyboard_check_pressed(ord("P")){
+    obj_settings.playerColour = 3;
 }
