@@ -73,7 +73,6 @@
     {"id":{"name":"spr_solid_green","path":"sprites/spr_solid_green/spr_solid_green.yy",},},
     {"id":{"name":"spr_solid_purple","path":"sprites/spr_solid_purple/spr_solid_purple.yy",},},
     {"id":{"name":"spr_solid_red","path":"sprites/spr_solid_red/spr_solid_red.yy",},},
-    {"id":{"name":"spr_solid","path":"sprites/spr_solid/spr_solid.yy",},},
     {"id":{"name":"spr_spikes","path":"sprites/spr_spikes/spr_spikes.yy",},},
   ],
   "resourceType":"GMProject",
