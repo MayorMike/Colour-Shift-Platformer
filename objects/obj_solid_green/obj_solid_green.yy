@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_solid",
-    "path":"sprites/spr_solid/spr_solid.yy",
+    "name":"spr_solid_green",
+    "path":"sprites/spr_solid_green/spr_solid_green.yy",
   },
   "spriteMaskId":null,
   "visible":true,
