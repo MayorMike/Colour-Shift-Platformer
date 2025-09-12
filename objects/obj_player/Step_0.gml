@@ -39,7 +39,7 @@ if playercolour == 1 {
 }
 
 //Player Idle Animation
-if xsp == 0 {
+if xsp == 0 and !isDead{
     //Check Player Colour and set proper sprite
     sprite_index = spr_player_idle;
     if playercolour == 1 {
@@ -113,10 +113,20 @@ if (place_meeting(x, y, obj_flag)){
 }
 
 //Touch spikes - die 
-if (place_meeting(x, y, obj_spikes)){
+if (!isDead and place_meeting(x, y, obj_spikes)){
     isDead = true;
     sprite_index = spr_player_death;
+    image_blend = obj_controller.player_colour_4;
+    image_index = 0;
+    image_speed = 1;
 }
+if (isDead) {
+    if (image_index >= image_number - 1) {
+        
+        room_restart();
+    }
+}
+
 
 
 
