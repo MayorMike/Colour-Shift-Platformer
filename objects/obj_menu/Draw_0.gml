@@ -13,8 +13,8 @@ height = op_border*2 + sprite_get_height(spr_main_font) + (op_length - 1) * op_s
 x = (room_width / 4) - (sprite_width / 4);
 y = (room_height / 4) - (sprite_height / 4);
 
-//Draw menu background
-draw_sprite_ext(sprite_index,image_index, x, y, width/sprite_width, height/sprite_height, 0, c_white, 1);
+//Draw menu background - border colour is based on the 4th player colour. Has PC, Xbox and PS variant. 
+draw_sprite_ext(sprite_index,image_index, x, y, width/sprite_width, height/sprite_height, 0, obj_controller.player_colour_4, 1);
 
 //Draw menu options
 draw_set_font(global.font_main);
