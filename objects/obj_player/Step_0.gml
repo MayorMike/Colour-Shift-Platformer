@@ -112,9 +112,10 @@ if (place_meeting(x, y, obj_flag)){
     room_goto_next();
 }
 
-//Touch spikes - die (or restart room for now)
+//Touch spikes - die 
 if (place_meeting(x, y, obj_spikes)){
-room_restart();
+    isDead = true;
+    sprite_index = spr_player_death;
 }
 
 
