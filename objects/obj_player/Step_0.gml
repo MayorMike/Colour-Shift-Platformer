@@ -117,6 +117,8 @@ if (place_meeting(x, y, obj_spikes)){
 room_restart();
 }
 
+
+
 //Temporary Change Colour Test
 if keyboard_check_pressed(ord("I")){
     obj_settings.playerColour = 1;

@@ -6,6 +6,7 @@ window_center();
 player_colour_1 = 0;
 player_colour_2 = 0;
 player_colour_3 = 0;
+player_colour_4 = 0;
 
 // Default Colours
 pc_blue = make_color_rgb(48, 0, 252);    // Colour 1
