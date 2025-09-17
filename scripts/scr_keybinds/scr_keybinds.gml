@@ -7,6 +7,9 @@ function initializeKeybinds(){
         new BindKB("Move Down", vk_down),
         new BindKB("Move Jump", vk_space),
         new BindKB("Shift Colour", vk_lshift),
+        new BindKB("Shift Blue", ord("1")),
+        new BindKB("Shift Green", ord("2")),
+        new BindKB("Shift Red", ord("3")),
         
         ];
     }
@@ -19,4 +22,7 @@ function keybindings() {
     global.moveDown = inputCheckHeld("Move Down");
     global.moveJump = inputCheckPressed("Move Jump");
     global.shiftColour = inputCheckPressed("Shift Colour");
+    global.shiftBlue = inputCheckPressed("Shift Blue");
+    global.shiftGreen = inputCheckPressed("Shift Green");
+    global.shiftRed = inputCheckPressed("Shift Red");
 }

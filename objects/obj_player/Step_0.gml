@@ -98,12 +98,30 @@ else if playercolour == 3 {
     move_and_collide(xsp, ysp, [obj_solid_red, obj_solid_purple]);
 }
 
+
+//Change player's colour - Cycle Blue, Green, Red
 if (global.shiftColour){
     playercolour = playercolour + 1; 
     show_debug_message("Colour Changed!");
     if playercolour > 3 {
         playercolour = 1;
     }
+}
+
+//Change Colour to Blue
+if (global.shiftBlue){
+    playercolour = 1;
+    show_debug_message("Colour set to Blue!")
+}
+//Change Colour to Green
+if (global.shiftGreen){
+    playercolour = 2;
+    show_debug_message("Colour set to Green!")
+}
+//Change Colour to Red
+if (global.shiftRed){
+    playercolour = 3;
+    show_debug_message("Colour set to Red!")
 }
 
 
