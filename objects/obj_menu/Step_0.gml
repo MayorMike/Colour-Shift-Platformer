@@ -1,7 +1,7 @@
 //Get input
-up_key = keyboard_check_pressed(vk_up) or keyboard_check_pressed(ord("W"));
-down_key = keyboard_check_pressed(vk_down) or keyboard_check_pressed(ord("S"));
-accept_key = keyboard_check_pressed(vk_enter);
+up_key = global.menuUp;
+down_key = global.menuDown;
+accept_key = global.menuAccept;
 
 //Store number of options in current menu
 op_length = array_length(option[menu_level]);

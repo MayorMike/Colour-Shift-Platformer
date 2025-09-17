@@ -10,6 +10,9 @@ function initializeKeybinds(){
         new BindKB("Shift Blue", ord("1")),
         new BindKB("Shift Green", ord("2")),
         new BindKB("Shift Red", ord("3")),
+        new BindKB("Menu Up", vk_up),
+        new BindKB("Menu Down", vk_down),
+        new BindKB("Menu Accept", vk_enter),
         
         ];
     }
@@ -25,4 +28,7 @@ function keybindings() {
     global.shiftBlue = inputCheckPressed("Shift Blue");
     global.shiftGreen = inputCheckPressed("Shift Green");
     global.shiftRed = inputCheckPressed("Shift Red");
+    global.menuUp = inputCheckPressed("Menu Up");
+    global.menuDown = inputCheckPressed("Menu Down");
+    global.menuAccept = inputCheckPressed("Menu Accept");
 }
