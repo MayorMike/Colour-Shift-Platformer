@@ -58,6 +58,7 @@
     {"id":{"name":"scr_changeInput","path":"scripts/scr_changeInput/scr_changeInput.yy",},},
     {"id":{"name":"scr_inputFunctions","path":"scripts/scr_inputFunctions/scr_inputFunctions.yy",},},
     {"id":{"name":"scr_keybinds","path":"scripts/scr_keybinds/scr_keybinds.yy",},},
+    {"id":{"name":"scr_keyToString","path":"scripts/scr_keyToString/scr_keyToString.yy",},},
     {"id":{"name":"spr_flag","path":"sprites/spr_flag/spr_flag.yy",},},
     {"id":{"name":"spr_game_icon","path":"sprites/spr_game_icon/spr_game_icon.yy",},},
     {"id":{"name":"spr_main_font","path":"sprites/spr_main_font/spr_main_font.yy",},},
