@@ -29,23 +29,42 @@ if accept_key {
         }
         break;
         
-    //Settings
-    case 1:
-        switch(pos){
-            //Fullscreen
-            case 0:
-                break;
-            
-            //Controls
-            case 1:  
-                break;
-            //Colours
-            case 2:
-                break;
-            //Back
-            case 3: menu_level = 0; break;
-        }
+        //Settings
+        case 1:
+            switch(pos){
+                //Fullscreen
+                case 0: if !obj_settings.isFullscreen{window_set_fullscreen(true) obj_settings.isFullscreen = true;}
+                        else if obj_settings.isFullscreen{window_set_fullscreen(false) obj_settings.isFullscreen = false;}
+                    break;
+                //Controls
+                case 1: menu_level = 2 break;
+                //Colours
+                case 2: menu_level = 3; break;
+                //Back
+                case 3: menu_level = 0; break;
+            }
+            break;
         
+        //Controls/Keybindings
+        case 2:
+            switch(pos){
+                case 0: break;
+                case 1: break;
+                case 2: break;
+                case 3: break;
+                case 4: menu_level = 1; break;
+            }
+            
+        //Player's Colour pallet screen
+        case 3:
+            switch(pos){
+                case 0: obj_settings.playerColour = 1; break;
+                case 1: obj_settings.playerColour = 2; break;
+                case 2: obj_settings.playerColour = 3; break;
+                case 3: menu_level = 1; break;
+            }
+            break;
+            
     }
     //set position back
     if _sml != menu_level{pos = 0};
