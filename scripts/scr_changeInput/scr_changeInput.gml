@@ -1,5 +1,6 @@
 
 //Master keybind check - Good for setting keybind regardless if it is Keyboard/Mouse or Gamepad checking
+//Calling only inputChangeKeyboard or inputChangeGamepad will only change *that* keybind type
 function inputChangeKeybind(_name){
     var _keybind = inputChangeKeyboard(_name);
     if (_keybind == -1){

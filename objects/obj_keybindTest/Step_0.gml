@@ -4,7 +4,7 @@ if (keyboard_check_pressed(vk_escape)){
 
 if (readingKeybind == true){
     text = "Reading...";
-    var _newKeybind = inputChangeKeybind("Move Right");
+    var _newKeybind = inputChangeKeyboard("Move Right");
     if(_newKeybind != -1){
         inputReplace("Move Right",_newKeybind);
         readingKeybind = false;
