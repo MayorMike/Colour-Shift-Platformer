@@ -17,7 +17,7 @@ if accept_key {
     
     switch(menu_level){
         //Pause Menu
-        case 0:
+        case MAIN:
         switch(pos){
             //Start Game
             case 0: room_goto_next(); break;
@@ -29,7 +29,7 @@ if accept_key {
         break;
         
         //Settings
-        case 1:
+        case SETTINGS:
             switch(pos){
                 //Fullscreen
                 case 0: if !obj_settings.isFullscreen{window_set_fullscreen(true) obj_settings.isFullscreen = true;}
@@ -45,7 +45,7 @@ if accept_key {
             break;
         
         //Controls/Keybindings
-        case 2:
+        case CONTROLS:
             switch(pos){
                 case 0: break;
                 case 1: break;
@@ -61,7 +61,7 @@ if accept_key {
             }
             
         //Player's Colour pallet screen
-        case 3:
+        case COLOURS:
             switch(pos){
                 case 0: obj_settings.playerColour = 1; break;
                 case 1: obj_settings.playerColour = 2; break;
