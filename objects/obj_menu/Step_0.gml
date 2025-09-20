@@ -9,8 +9,7 @@ op_length = array_length(option[menu_level]);
 
 //Move through menu
 pos += down_key - up_key;
-if pos >= op_length{pos = 0};
-if pos < 0 {pos = op_length - 1};
+pos=(pos+op_length) mod op_length;
    
 //Using Options
 if accept_key {
@@ -52,7 +51,13 @@ if accept_key {
                 case 1: break;
                 case 2: break;
                 case 3: break;
-                case 4: menu_level = 1; break;
+                case 4: break;
+                case 5: break;
+                case 6: break;
+                case 7: break;
+                case 8: break;
+                case 9: break;
+                case 10: menu_level = 1; break;
             }
             
         //Player's Colour pallet screen

@@ -18,11 +18,17 @@ option [1, 2] = "Colours"
 option [1, 3] = "Back";
 
 //Controls/Keybinds Screen
-option[2, 0] = "KEY";
-option[2, 1] = "KEY";
-option[2, 2] = "KEY";
-option[2, 3] = "KEY";
-option[2, 4] = "Back";
+option[2, 0] = "Move Left";
+option[2, 1] = "Move Right";
+option[2, 2] = "Jump";
+option[2, 3] = "Shift Colour";
+option[2, 4] = "Colour 1";
+option[2, 5] = "Colour 2";
+option[2, 6] = "Colour 3";
+option[2, 7] = "Menu Up";
+option[2, 8] = "Menu Down";
+option[2, 9] = "Accept Key";
+option[2, 10] = "Back";
 
 //Colour Options
 option [3, 0] = "PC Colours";
