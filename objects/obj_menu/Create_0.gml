@@ -3,6 +3,9 @@
 #macro CONTROLS 2
 #macro COLOURS 3
 
+global.dsm_settings = ds_map_create();
+#macro set global.dsm_settings
+
 width = 64;
 height = 104;
 
