@@ -1,5 +1,5 @@
 //Player Gravity
-ysp += 0.1;
+ysp += 0.2;
 //Player speed
 xsp = 0;
 
