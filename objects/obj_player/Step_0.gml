@@ -56,7 +56,7 @@ if xsp == 0 and !isDead{
 //Check if player is on ground
 //Blue
 if playercolour == 1 {
-    if place_meeting(x, y+3, [obj_solid_blue, obj_solid_purple]){
+    if place_meeting(x, y+3, [obj_solid_blue, obj_solid_purple,obj_oob]){
         ysp = 0;
         if (global.moveJump) and !isDead{
             ysp = -8;
@@ -66,7 +66,7 @@ if playercolour == 1 {
 
 //Green
 else if playercolour == 2 {
-    if place_meeting(x, y+3, [obj_solid_green, obj_solid_purple]){
+    if place_meeting(x, y+3, [obj_solid_green, obj_solid_purple,obj_oob]){
         ysp = 0;
         if (global.moveJump) and !isDead{
             ysp = -8;
@@ -76,7 +76,7 @@ else if playercolour == 2 {
 
 //Red
 else if playercolour == 3 {
-    if place_meeting(x, y+3, [obj_solid_red, obj_solid_purple]){
+    if place_meeting(x, y+3, [obj_solid_red, obj_solid_purple,obj_oob]){
         ysp = 0;
         if (global.moveJump) and !isDead{
             ysp = -8
