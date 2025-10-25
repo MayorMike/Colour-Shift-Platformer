@@ -131,7 +131,7 @@ if (place_meeting(x, y, obj_flag)){
 }
 
 //Touch spikes - die 
-if (!isDead and place_meeting(x, y, obj_spikes)){
+if (!isDead and place_meeting(x, y+4, obj_spikes)){
     isDead = true;
     sprite_index = spr_player_death;
     image_blend = obj_controller.player_colour_4;

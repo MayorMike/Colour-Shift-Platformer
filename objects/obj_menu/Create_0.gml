@@ -9,8 +9,8 @@ global.dsm_settings = ds_map_create();
 width = 64;
 height = 104;
 
-op_border = 16;
-op_space = 16;
+op_border = 48;
+op_space = 48;
 
 pos = 0;
 
@@ -46,7 +46,3 @@ option [COLOURS, 3] = "Back";
 
 op_length = 0;
 menu_level = 0;
-
-
-//Control Variables
-
