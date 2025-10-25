@@ -1,12 +1,12 @@
 //Player Gravity
-ysp += 0.2;
+ysp += 0.4;
 //Player speed
 xsp = 0;
 
 
 //Move Left
 if (global.moveLeft) and !isDead{
-    xsp = -1;
+    xsp = -4;
     //Check Player Colour
     sprite_index = spr_player_left
 if playercolour == 1 {
@@ -23,7 +23,7 @@ if playercolour == 1 {
 
 //Move Right
 if (global.moveRight) and !isDead{
-    xsp = +1;
+    xsp = +4;
     //Check Player Colour
     sprite_index = spr_player_right
 if playercolour == 1 {
@@ -56,30 +56,30 @@ if xsp == 0 and !isDead{
 //Check if player is on ground
 //Blue
 if playercolour == 1 {
-    if place_meeting(x, y+1, [obj_solid_blue, obj_solid_purple]){
+    if place_meeting(x, y+3, [obj_solid_blue, obj_solid_purple]){
         ysp = 0;
         if (global.moveJump) and !isDead{
-            ysp = -2;
+            ysp = -8;
         }
     }
 }
 
 //Green
 else if playercolour == 2 {
-    if place_meeting(x, y+1, [obj_solid_green, obj_solid_purple]){
+    if place_meeting(x, y+3, [obj_solid_green, obj_solid_purple]){
         ysp = 0;
         if (global.moveJump) and !isDead{
-            ysp = -2;
+            ysp = -8;
         }
     }
 }
 
 //Red
 else if playercolour == 3 {
-    if place_meeting(x, y+1, [obj_solid_red, obj_solid_purple]){
+    if place_meeting(x, y+3, [obj_solid_red, obj_solid_purple]){
         ysp = 0;
         if (global.moveJump) and !isDead{
-            ysp = -2;
+            ysp = -8
         }
     }
 }
