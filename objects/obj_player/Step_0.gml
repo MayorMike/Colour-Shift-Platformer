@@ -5,7 +5,6 @@ xsp = 0;
 
 //Move Left
 if (global.moveLeft) and !isDead{
-    isMoving = true;
     xsp = -4;
     sprite_index = spr_player_left_start;
     
