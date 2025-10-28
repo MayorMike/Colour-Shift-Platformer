@@ -3,12 +3,19 @@ ysp += 0.4;
 //Player speed
 xsp = 0;
 
-
 //Move Left
 if (global.moveLeft) and !isDead{
+    isMoving = true;
     xsp = -4;
+    sprite_index = spr_player_left_start;
+    
+    if (sprite_index == spr_player_left_start && image_index = 3){
+        sprite_index = spr_player_left; 
+        image_speed = 2;
+    }
+
+    
     //Check Player Colour
-    sprite_index = spr_player_left
 if playercolour == 1 {
         image_blend = obj_controller.player_colour_1;
     }
@@ -24,8 +31,9 @@ if playercolour == 1 {
 //Move Right
 if (global.moveRight) and !isDead{
     xsp = +4;
+    sprite_index = spr_player_right_start;
+    
     //Check Player Colour
-    sprite_index = spr_player_right
 if playercolour == 1 {
         image_blend = obj_controller.player_colour_1;
     }
