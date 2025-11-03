@@ -56,6 +56,7 @@
     {"id":{"name":"Level0","path":"rooms/Level0/Level0.yy",},},
     {"id":{"name":"Level1","path":"rooms/Level1/Level1.yy",},},
     {"id":{"name":"Level2","path":"rooms/Level2/Level2.yy",},},
+    {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"scr_changeInput","path":"scripts/scr_changeInput/scr_changeInput.yy",},},
     {"id":{"name":"scr_inputFunctions","path":"scripts/scr_inputFunctions/scr_inputFunctions.yy",},},
     {"id":{"name":"scr_keybinds","path":"scripts/scr_keybinds/scr_keybinds.yy",},},
