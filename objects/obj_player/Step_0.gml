@@ -1,14 +1,20 @@
 //Player Gravity
-ysp += 0.1;
+ysp += 0.4;
 //Player speed
 xsp = 0;
 
-
 //Move Left
 if (global.moveLeft) and !isDead{
-    xsp = -1;
+    xsp = -4;
+    sprite_index = spr_player_left_start;
+    
+    if (sprite_index == spr_player_left_start && image_index = 3){
+        sprite_index = spr_player_left; 
+        image_speed = 2;
+    }
+
+    
     //Check Player Colour
-    sprite_index = spr_player_left
 if playercolour == 1 {
         image_blend = obj_controller.player_colour_1;
     }
@@ -23,9 +29,10 @@ if playercolour == 1 {
 
 //Move Right
 if (global.moveRight) and !isDead{
-    xsp = +1;
+    xsp = +4;
+    sprite_index = spr_player_right_start;
+    
     //Check Player Colour
-    sprite_index = spr_player_right
 if playercolour == 1 {
         image_blend = obj_controller.player_colour_1;
     }
@@ -56,30 +63,30 @@ if xsp == 0 and !isDead{
 //Check if player is on ground
 //Blue
 if playercolour == 1 {
-    if place_meeting(x, y+1, [obj_solid_blue, obj_solid_purple]){
+    if place_meeting(x, y+3, [obj_solid_blue, obj_solid_purple,obj_oob]){
         ysp = 0;
         if (global.moveJump) and !isDead{
-            ysp = -2;
+            ysp = -8;
         }
     }
 }
 
 //Green
 else if playercolour == 2 {
-    if place_meeting(x, y+1, [obj_solid_green, obj_solid_purple]){
+    if place_meeting(x, y+3, [obj_solid_green, obj_solid_purple,obj_oob]){
         ysp = 0;
         if (global.moveJump) and !isDead{
-            ysp = -2;
+            ysp = -8;
         }
     }
 }
 
 //Red
 else if playercolour == 3 {
-    if place_meeting(x, y+1, [obj_solid_red, obj_solid_purple]){
+    if place_meeting(x, y+3, [obj_solid_red, obj_solid_purple,obj_oob]){
         ysp = 0;
         if (global.moveJump) and !isDead{
-            ysp = -2;
+            ysp = -8
         }
     }
 }
@@ -131,7 +138,7 @@ if (place_meeting(x, y, obj_flag)){
 }
 
 //Touch spikes - die 
-if (!isDead and place_meeting(x, y, obj_spikes)){
+if (!isDead and place_meeting(x, y+4, obj_spikes)){
     isDead = true;
     sprite_index = spr_player_death;
     image_blend = obj_controller.player_colour_4;
