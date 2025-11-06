@@ -34,7 +34,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.13.1.193",
+    "IDEVersion":"2024.14.0.207",
   },
   "name":"Colour-Shift-Platformer",
   "resources":[
@@ -56,6 +56,7 @@
     {"id":{"name":"Level0","path":"rooms/Level0/Level0.yy",},},
     {"id":{"name":"Level1","path":"rooms/Level1/Level1.yy",},},
     {"id":{"name":"Level2","path":"rooms/Level2/Level2.yy",},},
+    {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"scr_changeInput","path":"scripts/scr_changeInput/scr_changeInput.yy",},},
     {"id":{"name":"scr_inputFunctions","path":"scripts/scr_inputFunctions/scr_inputFunctions.yy",},},
     {"id":{"name":"scr_keybinds","path":"scripts/scr_keybinds/scr_keybinds.yy",},},
@@ -67,7 +68,11 @@
     {"id":{"name":"spr_oob","path":"sprites/spr_oob/spr_oob.yy",},},
     {"id":{"name":"spr_player_death","path":"sprites/spr_player_death/spr_player_death.yy",},},
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},},
+    {"id":{"name":"spr_player_jump_left","path":"sprites/spr_player_jump_left/spr_player_jump_left.yy",},},
+    {"id":{"name":"spr_player_jump_right","path":"sprites/spr_player_jump_right/spr_player_jump_right.yy",},},
+    {"id":{"name":"spr_player_left_start","path":"sprites/spr_player_left_start/spr_player_left_start.yy",},},
     {"id":{"name":"spr_player_left","path":"sprites/spr_player_left/spr_player_left.yy",},},
+    {"id":{"name":"spr_player_right_start","path":"sprites/spr_player_right_start/spr_player_right_start.yy",},},
     {"id":{"name":"spr_player_right","path":"sprites/spr_player_right/spr_player_right.yy",},},
     {"id":{"name":"spr_solid_blue","path":"sprites/spr_solid_blue/spr_solid_blue.yy",},},
     {"id":{"name":"spr_solid_green","path":"sprites/spr_solid_green/spr_solid_green.yy",},},

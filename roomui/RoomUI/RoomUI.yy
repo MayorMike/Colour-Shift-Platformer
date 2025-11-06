@@ -1,0 +1,17 @@
+{
+  "$GMRoomUI":"",
+  "%Name":"RoomUI",
+  "children":[
+    {"$GMRUILayer":"v1","%Name":"UI_MainMenu","alignItems":2,"children":[],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"UI_MainMenu","nodeColour":4282939122,"resourceType":"GMRUILayer","resourceVersion":"2.0","visible":false,},
+  ],
+  "locked":false,
+  "name":"RoomUI",
+  "parent":{
+    "name":"Colour-Shift-Platformer",
+    "path":"Colour-Shift-Platformer.yyp",
+  },
+  "resourceType":"GMRoomUI",
+  "resourceVersion":"2.0",
+  "viewspaceChildren":[],
+  "visible":true,
+}
