@@ -26,3 +26,23 @@ ps_square = make_color_rgb(246,157,200);    // PS Square Button    - Colour 1
 ps_triangle = make_color_rgb(107,228,223);  // PS Triangle Button  - Colour 2
 ps_circle = make_color_rgb(247,95,102);     // PS Circle Button    - Colour 3
 ps_x = make_color_rgb(118,126,225);         // PS X button         - Colour 4
+
+paused = false;
+layer_name = "PauseLayer";
+
+update_pause = function()
+{
+    if (paused)
+    {
+        instance_deactivate_all(true);
+        instance_activate_object(obj_settings);
+        layer_set_visible(layer_name, true);
+    }
+    else 
+    {
+    	instance_activate_all();
+        layer_set_visible(layer_name, false);
+    }
+}
+
+update_pause();

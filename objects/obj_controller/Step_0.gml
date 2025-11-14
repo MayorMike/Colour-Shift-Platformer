@@ -17,4 +17,9 @@ else if obj_settings.playerColour == 3{
     player_colour_4 = ps_x;
 }
 
+if (keyboard_check_pressed(vk_escape)){
+    paused = !paused;
+    update_pause();
+}
+
 
